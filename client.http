@@ -1,0 +1,74 @@
+# Endpoints de Pacote
+
+GET /pacotes HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+# Novo Pacote
+POST /pacotes HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "destinatario": "João da Silva",
+  "endereco": {
+    "id": 1
+  },
+  "status": "pendente"
+}
+
+###
+# Atualizar pacote
+PUT /pacotes/1 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "destinatario": "João da Silva",
+  "endereco": {
+    "id": 1
+  },
+  "status": "em trânsito"
+}
+
+###
+# Consultar um pacote específico
+GET /pacotes/1 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+# Deletar um pacote
+DELETE /pacotes/1 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+# Endpoint do Rastreamento
+GET /rastreamentos/1 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+# Endpoint de Endereço
+
+# Listar endereços
+GET /enderecos HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+# Novo endereço
+POST /enderecos HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "rua": "Rua A",
+  "numero": "123",
+  "cidade": "Cidade B",
+  "estado": "Estado C",
+  "cep": "12345-678"
+}
+
